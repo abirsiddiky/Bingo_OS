@@ -106,54 +106,6 @@ When booting, you'll see these options:
 
 *Change these passwords after installation!*
 
-## 🛠️ Building from Source
-
-### Prerequisites (Rocky Linux 10)
-```bash
-sudo dnf install -y podman squashfs-tools xorriso
-```
-
-### Build Process
-```bash
-# Create workspace
-mkdir -p ~/bingo-os
-cd ~/bingo-os
-
-# Start Debian container
-podman run -it --privileged \
-  -v ~/bingo-os:/work:Z \
-  --name bingo-builder \
-  debian:trixie /bin/bash
-
-# Inside container
-cd /work
-apt update
-apt install -y debootstrap squashfs-tools xorriso \
-  isolinux syslinux-common grub-pc-bin grub-efi-amd64-bin mtools
-
-# Create base system
-debootstrap --arch=amd64 trixie chroot http://deb.debian.org/debian/
-
-# Mount and enter chroot
-mount --bind /dev chroot/dev
-mount --bind /proc chroot/proc
-mount --bind /sys chroot/sys
-mount --bind /dev/pts chroot/dev/pts
-chroot chroot /bin/bash
-
-# Configure system (see full build script)
-# ... install packages and configure ...
-
-# Exit chroot
-exit
-
-# Build ISO
-# ... create ISO structure and generate ISO ...
-
-# Copy ISO to host
-exit
-podman cp bingo-builder:/work/Bingo-OS-1.0.iso ~/
-```
 
 ## 🎨 Customization
 
