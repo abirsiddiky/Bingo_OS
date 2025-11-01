@@ -58,15 +58,17 @@ Bingo OS is a custom Linux distribution based on Debian 13 (Trixie) featuring th
 ### Create Bootable USB
 
 #### Using Ventoy (Recommended)
-1. Download [Ventoy](https://www.ventoy.net/)
-2. Install Ventoy to your USB drive
-3. Copy `Bingo-OS-1.0.iso` to the USB drive
+1. Download the [iso](https://drive.google.com/file/d/1mML-7WP43HjifjMvRdLQZ7Y2mJ9WAkoL/view?usp=drive_link) file
+2. Download [Ventoy](https://www.ventoy.net/)
+3. Install Ventoy to your USB drive
+4. Copy `Bingo-OS-1.0.iso` to the USB drive
 
 #### Using Rufus (Windows)
-1. Download [Rufus](https://rufus.ie/)
-2. Select your USB drive
-3. Select `Bingo-OS-1.0.iso`
-4. Click Start
+1. Download the [iso](https://drive.google.com/file/d/1mML-7WP43HjifjMvRdLQZ7Y2mJ9WAkoL/view?usp=drive_link) file
+2. Download [Rufus](https://rufus.ie/)
+3. Select your USB drive
+4. Select `Bingo-OS-1.0.iso`
+5. Click Start
 
 #### Using dd (Linux)
 ```bash
